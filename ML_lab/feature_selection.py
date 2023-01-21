@@ -173,12 +173,3 @@ class train_test_selection():
             return self.vaildingdata
         elif param=='test':
             return self.testingdata
-from ML.load_dataset import load_data
-df=load_data()
-testing_data=train_test_selection(dataset=df,year=2017,n_years=1)
-print(testing_data.test_size)
-print(testing_data.vaild_size)
-vaild_data=testing_data.__getitem__('vaild')
-vaild_data['Brupt_crsp_t1'].value_counts()
-test_data=testing_data.__getitem__('test')
-vaild_data['Brupt_crsp_t1'].value_counts()
